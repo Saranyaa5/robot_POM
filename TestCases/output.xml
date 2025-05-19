@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T15:08:42.979682" rpa="false" schemaversion="5">
+<suite id="s1" name="Logintest1" source="C:\robot_POM\TestCases\Logintest1.robot">
+<test id="s1-t1" name="Invalid Login Test" line="8">
+<status status="FAIL" start="2025-05-19T15:08:43.768794" elapsed="0.003491">Test cannot be empty.</status>
+</test>
+<doc>Login test using CSV data</doc>
+<status status="FAIL" start="2025-05-19T15:08:42.982698" elapsed="0.792046"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logintest1" id="s1" pass="0" fail="1" skip="0">Logintest1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-19T15:08:43.761221" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\robot_POM\TestCases\Logintest1.robot", line 0</msg>
+<msg time="2025-05-19T15:08:43.761734" level="ERROR">In source file:
+  File "LoginData.csv", line 0</msg>
+<msg time="2025-05-19T15:08:43.767205" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ValueError: Unassigned requiered argument detected: ${Username}.</msg>
+</errors>
+</robot>
