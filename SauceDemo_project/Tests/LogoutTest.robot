@@ -3,6 +3,8 @@ Documentation    To validate the successful logout after login
 Library    SeleniumLibrary
 Resource    ../Resources/LogoutResource.robot
 Resource    ../Resources/GenericResource.robot
+Resource    ../Resources/MenuResource.robot
+
 
 *** Test Cases ***
 logout after successful login

@@ -7,7 +7,6 @@ ${url}    https://www.saucedemo.com/
 ${browser}    chrome
 ${base_user}    standard_user    
 ${base_pass}    secret_sauce
-${side_menu}    xpath://button[contains(@id,'react-burger-menu-btn')]    
 
 # *** Keywords ***
 # Open the browser with url
