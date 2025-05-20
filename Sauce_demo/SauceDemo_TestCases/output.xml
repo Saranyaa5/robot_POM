@@ -1,377 +1,742 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T22:52:14.188428" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-20T09:32:43.953294" rpa="false" schemaversion="5">
 <suite id="s1" name="SauceDemo TestCases" source="C:\robot_POM\Sauce_demo\SauceDemo_TestCases">
 <suite id="s1-s1" name="LoginTest" source="C:\robot_POM\Sauce_demo\SauceDemo_TestCases\LoginTest.robot">
 <test id="s1-s1-t1" name="Invalid Login with" line="13">
 <kw name="Validate Successful Login">
 <kw name="Open the browser with url" owner="CommonResources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:25.605396" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-05-20T09:32:49.164261" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-19T22:52:25.601323" elapsed="8.907697"/>
+<status status="PASS" start="2025-05-20T09:32:49.163844" elapsed="24.330029"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-19T22:52:34.512901" elapsed="0.328127"/>
+<status status="PASS" start="2025-05-20T09:33:13.494682" elapsed="0.047386"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-19T22:52:34.842390" elapsed="0.008565"/>
+<status status="PASS" start="2025-05-20T09:33:13.542374" elapsed="0.002082"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:52:25.592277" elapsed="9.259942"/>
+<status status="PASS" start="2025-05-20T09:32:49.162832" elapsed="24.382013"/>
 </kw>
 <kw name="fill the login form">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:34.859113" level="INFO">Typing text 'standard_user' into text field 'name=user-name'.</msg>
-<arg>${un}</arg>
+<msg time="2025-05-20T09:33:13.546379" level="INFO">Typing text 'standard_user' into text field 'standard_user'.</msg>
+<msg time="2025-05-20T09:33:18.810411" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-20T09:33:18.810721" level="FAIL">Element with locator 'standard_user' not found.</msg>
+<arg>${user_name}</arg>
 <arg>${Username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:34.856395" elapsed="1.347662"/>
+<status status="FAIL" start="2025-05-20T09:33:13.545872" elapsed="5.376391">Element with locator 'standard_user' not found.</status>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:36.208024" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-05-19T22:52:36.468360" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${pw}</arg>
+<arg>${pass}</arg>
 <arg>${Password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:36.205886" elapsed="1.036738"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.922570" elapsed="0.000056"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:37.245957" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${loginbtn}</arg>
+<arg>${login_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:37.244174" elapsed="1.156587"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.922779" elapsed="0.000045"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-19T22:52:43.405056" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-19T22:52:38.402369" elapsed="5.003621"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.922965" elapsed="0.000044"/>
 </kw>
 <arg>${Username}</arg>
 <arg>${Password}</arg>
-<status status="PASS" start="2025-05-19T22:52:34.853594" elapsed="8.553543"/>
+<status status="FAIL" start="2025-05-20T09:33:13.545253" elapsed="5.377949">Element with locator 'standard_user' not found.</status>
 </kw>
 <if>
 <branch type="IF" condition="'${Username}'=='locked_out_user'">
 <kw name="verify locked out error">
-<status status="NOT RUN" start="2025-05-19T22:52:43.411186" elapsed="0.000515"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.923668" elapsed="0.000118"/>
 </kw>
-<status status="NOT RUN" start="2025-05-19T22:52:43.408395" elapsed="0.003833"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.923422" elapsed="0.000428"/>
 </branch>
 <branch type="ELSE">
 <kw name="verify the dash board Page">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:43.418789" level="INFO">Verifying element 'xpath=//div[@class='app_logo']' contains exact text 'Swag Labs'.</msg>
-<arg>${dashText}</arg>
-<arg>Swag Labs</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-05-19T22:52:43.417301" elapsed="0.198960"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.924166" elapsed="0.000073"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:52:43.414967" elapsed="0.202474"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:52:43.412848" elapsed="0.205121"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.923935" elapsed="0.000382"/>
 </branch>
-<status status="PASS" start="2025-05-19T22:52:43.408035" elapsed="0.210471"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.923371" elapsed="0.001006"/>
 </if>
 <kw name="close the broswe session" owner="CommonResources">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-19T22:52:43.622809" elapsed="2.999661"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:52:43.620108" elapsed="3.003340"/>
+<status status="NOT RUN" start="2025-05-20T09:33:18.924549" elapsed="0.000043"/>
 </kw>
 <arg>Username=standard_user</arg>
 <arg>Password=secret_sauce</arg>
-<status status="PASS" start="2025-05-19T22:52:25.586185" elapsed="21.038131"/>
+<status status="FAIL" start="2025-05-20T09:32:49.162168" elapsed="29.762573">Element with locator 'standard_user' not found.</status>
 </kw>
-<status status="PASS" start="2025-05-19T22:52:25.568705" elapsed="21.058255"/>
+<status status="FAIL" start="2025-05-20T09:32:49.159955" elapsed="29.765322">Element with locator 'standard_user' not found.</status>
 </test>
 <test id="s1-s1-t2" name="Invalid Login with" line="13">
 <kw name="Validate Successful Login">
 <kw name="Open the browser with url" owner="CommonResources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:46.653045" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-05-20T09:33:18.929682" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-19T22:52:46.651222" elapsed="8.516907"/>
+<status status="PASS" start="2025-05-20T09:33:18.929420" elapsed="6.874527"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-05-20T09:33:25.810198" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
+<msg time="2025-05-20T09:33:25.811769" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-19T22:52:55.170537" elapsed="0.351713"/>
+<status status="FAIL" start="2025-05-20T09:33:25.804517" elapsed="0.099102">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-19T22:52:55.524170" elapsed="0.008938"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.904137" elapsed="0.000064"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:52:46.649283" elapsed="8.884643"/>
+<status status="FAIL" start="2025-05-20T09:33:18.929110" elapsed="6.975578">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="fill the login form">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:55.539693" level="INFO">Typing text 'locked_out_user' into text field 'name=user-name'.</msg>
-<arg>${un}</arg>
-<arg>${Username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:55.538104" elapsed="1.481438"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:57.025017" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-05-19T22:52:57.496299" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${pw}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:57.021343" elapsed="1.361810"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:52:58.387310" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${loginbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:52:58.384982" elapsed="0.780682"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-19T22:53:04.171130" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-19T22:52:59.168514" elapsed="5.003553"/>
-</kw>
 <arg>${Username}</arg>
 <arg>${Password}</arg>
-<status status="PASS" start="2025-05-19T22:52:55.535188" elapsed="8.637805"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.904957" elapsed="0.000056"/>
 </kw>
 <if>
 <branch type="IF" condition="'${Username}'=='locked_out_user'">
 <kw name="verify locked out error">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:04.181860" level="INFO">Verifying element 'xpath=//h3' contains exact text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
-<arg>${lockedError}</arg>
-<arg>Epic sadface: Sorry, this user has been locked out.</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-05-19T22:53:04.179687" elapsed="0.211243"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905352" elapsed="0.000049"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:04.176462" elapsed="0.215286"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:04.173958" elapsed="0.218227"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905160" elapsed="0.000302"/>
 </branch>
 <branch type="ELSE">
 <kw name="verify the dash board Page">
-<status status="NOT RUN" start="2025-05-19T22:53:04.393865" elapsed="0.000313"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905672" elapsed="0.000040"/>
 </kw>
-<status status="NOT RUN" start="2025-05-19T22:53:04.392613" elapsed="0.001938"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905525" elapsed="0.000237"/>
 </branch>
-<status status="PASS" start="2025-05-19T22:53:04.173634" elapsed="0.222177"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905117" elapsed="0.000693"/>
 </if>
 <kw name="close the broswe session" owner="CommonResources">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-19T22:53:04.399552" elapsed="2.983912"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:04.397160" elapsed="2.987112"/>
+<status status="NOT RUN" start="2025-05-20T09:33:25.905958" elapsed="0.000044"/>
 </kw>
 <arg>Username=locked_out_user</arg>
 <arg>Password=secret_sauce</arg>
-<status status="PASS" start="2025-05-19T22:52:46.646368" elapsed="20.738409"/>
+<status status="FAIL" start="2025-05-20T09:33:18.928691" elapsed="6.977463">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
-<status status="PASS" start="2025-05-19T22:52:46.632828" elapsed="20.754050"/>
+<status status="FAIL" start="2025-05-20T09:33:18.926646" elapsed="6.980157">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </test>
 <test id="s1-s1-t3" name="Invalid Login with" line="13">
 <kw name="Validate Successful Login">
 <kw name="Open the browser with url" owner="CommonResources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:07.417966" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-05-20T09:33:25.914727" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-19T22:53:07.415370" elapsed="9.357656"/>
+<status status="PASS" start="2025-05-20T09:33:25.914366" elapsed="3.378043"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-05-20T09:33:29.298134" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
+<msg time="2025-05-20T09:33:29.299523" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-19T22:53:16.774234" elapsed="0.271774"/>
+<status status="FAIL" start="2025-05-20T09:33:29.293014" elapsed="0.009687">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-19T22:53:17.047606" elapsed="0.008604"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.303239" elapsed="0.000154"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:07.411870" elapsed="9.645142"/>
+<status status="FAIL" start="2025-05-20T09:33:25.913962" elapsed="3.389926">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="fill the login form">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:17.062452" level="INFO">Typing text 'problem_user' into text field 'name=user-name'.</msg>
-<arg>${un}</arg>
-<arg>${Username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:17.060867" elapsed="1.833359"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:18.899607" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-05-19T22:53:19.188321" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${pw}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:18.895927" elapsed="1.052093"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:19.952064" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${loginbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:19.949829" elapsed="1.293661"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-19T22:53:26.247623" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-19T22:53:21.245293" elapsed="5.003235"/>
-</kw>
 <arg>${Username}</arg>
 <arg>${Password}</arg>
-<status status="PASS" start="2025-05-19T22:53:17.058237" elapsed="9.191871"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.304625" elapsed="0.000321"/>
 </kw>
 <if>
 <branch type="IF" condition="'${Username}'=='locked_out_user'">
 <kw name="verify locked out error">
-<status status="NOT RUN" start="2025-05-19T22:53:26.253313" elapsed="0.000364"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.305837" elapsed="0.000132"/>
 </kw>
-<status status="NOT RUN" start="2025-05-19T22:53:26.251357" elapsed="0.002780"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.305430" elapsed="0.000616"/>
 </branch>
 <branch type="ELSE">
 <kw name="verify the dash board Page">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:26.262326" level="INFO">Verifying element 'xpath=//div[@class='app_logo']' contains exact text 'Swag Labs'.</msg>
-<arg>${dashText}</arg>
-<arg>Swag Labs</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-05-19T22:53:26.259658" elapsed="0.206730"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.306335" elapsed="0.000072"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:26.256276" elapsed="0.210903"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:26.254751" elapsed="0.212760"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.306117" elapsed="0.000475"/>
 </branch>
-<status status="PASS" start="2025-05-19T22:53:26.251049" elapsed="0.216765"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.305344" elapsed="0.001379"/>
 </if>
 <kw name="close the broswe session" owner="CommonResources">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-19T22:53:26.470680" elapsed="3.035285"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:26.468812" elapsed="3.038310"/>
+<status status="NOT RUN" start="2025-05-20T09:33:29.307074" elapsed="0.000114"/>
 </kw>
 <arg>Username=problem_user</arg>
 <arg>Password=secret_sauce</arg>
-<status status="PASS" start="2025-05-19T22:53:07.407500" elapsed="22.100462"/>
+<status status="FAIL" start="2025-05-20T09:33:25.913364" elapsed="3.394109">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:07.392654" elapsed="22.117847"/>
+<status status="FAIL" start="2025-05-20T09:33:25.909227" elapsed="3.398990">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </test>
 <test id="s1-s1-t4" name="Invalid Login with" line="13">
 <kw name="Validate Successful Login">
 <kw name="Open the browser with url" owner="CommonResources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:29.540299" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-05-20T09:33:29.316310" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-19T22:53:29.537776" elapsed="8.027095"/>
+<status status="PASS" start="2025-05-20T09:33:29.315191" elapsed="3.145598"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-05-20T09:33:32.465802" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
+<msg time="2025-05-20T09:33:32.467140" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-19T22:53:37.566354" elapsed="0.184433"/>
+<status status="FAIL" start="2025-05-20T09:33:32.461162" elapsed="0.008486">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-19T22:53:37.752237" elapsed="0.009571"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.470129" elapsed="0.000091"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:29.533517" elapsed="8.229377"/>
+<status status="FAIL" start="2025-05-20T09:33:29.314098" elapsed="3.156339">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
 <kw name="fill the login form">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:37.771036" level="INFO">Typing text 'performance_glitch_user' into text field 'name=user-name'.</msg>
-<arg>${un}</arg>
-<arg>${Username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:37.768729" elapsed="1.746746"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:39.520147" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-05-19T22:53:39.968750" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${pw}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:39.517446" elapsed="1.403576"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:40.925668" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${loginbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-19T22:53:40.922798" elapsed="6.439134"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-19T22:53:52.367183" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-19T22:53:47.363794" elapsed="5.004304"/>
-</kw>
 <arg>${Username}</arg>
 <arg>${Password}</arg>
-<status status="PASS" start="2025-05-19T22:53:37.764753" elapsed="14.604393"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.470722" elapsed="0.000067"/>
 </kw>
 <if>
 <branch type="IF" condition="'${Username}'=='locked_out_user'">
 <kw name="verify locked out error">
-<status status="NOT RUN" start="2025-05-19T22:53:52.371939" elapsed="0.000399"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.471340" elapsed="0.000176"/>
 </kw>
-<status status="NOT RUN" start="2025-05-19T22:53:52.370051" elapsed="0.002760"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.471021" elapsed="0.000621"/>
 </branch>
 <branch type="ELSE">
 <kw name="verify the dash board Page">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-19T22:53:52.378975" level="INFO">Verifying element 'xpath=//div[@class='app_logo']' contains exact text 'Swag Labs'.</msg>
-<arg>${dashText}</arg>
-<arg>Swag Labs</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-05-19T22:53:52.376804" elapsed="0.232245"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.472136" elapsed="0.000132"/>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:52.374561" elapsed="0.268952"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:52.373333" elapsed="0.281860"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.471756" elapsed="0.000666"/>
 </branch>
-<status status="PASS" start="2025-05-19T22:53:52.369834" elapsed="0.286179"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.470941" elapsed="0.001582"/>
 </if>
 <kw name="close the broswe session" owner="CommonResources">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-19T22:53:52.692016" elapsed="3.352604"/>
-</kw>
-<status status="PASS" start="2025-05-19T22:53:52.680187" elapsed="3.365533"/>
+<status status="NOT RUN" start="2025-05-20T09:33:32.472832" elapsed="0.000093"/>
 </kw>
 <arg>Username=performance_glitch_user</arg>
 <arg>Password=secret_sauce</arg>
-<status status="PASS" start="2025-05-19T22:53:29.529911" elapsed="26.516509"/>
+<status status="FAIL" start="2025-05-20T09:33:29.312854" elapsed="3.160268">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </kw>
-<status status="PASS" start="2025-05-19T22:53:29.515719" elapsed="26.532908"/>
+<status status="FAIL" start="2025-05-20T09:33:29.310222" elapsed="3.163431">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</status>
 </test>
-<status status="PASS" start="2025-05-19T22:52:14.565441" elapsed="101.490171"/>
+<status status="FAIL" start="2025-05-20T09:32:44.016633" elapsed="48.458911"/>
 </suite>
-<status status="PASS" start="2025-05-19T22:52:14.201215" elapsed="101.867575"/>
+<status status="FAIL" start="2025-05-20T09:32:43.955432" elapsed="48.545698"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="SauceDemo TestCases" id="s1" pass="4" fail="0" skip="0">SauceDemo TestCases</stat>
-<stat name="LoginTest" id="s1-s1" pass="4" fail="0" skip="0">SauceDemo TestCases.LoginTest</stat>
+<stat name="SauceDemo TestCases" id="s1" pass="0" fail="4" skip="0">SauceDemo TestCases</stat>
+<stat name="LoginTest" id="s1-s1" pass="0" fail="4" skip="0">SauceDemo TestCases.LoginTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-19T22:52:46.633865" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
-<msg time="2025-05-19T22:53:07.393114" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
-<msg time="2025-05-19T22:53:29.516152" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
+<msg time="2025-05-20T09:33:18.926850" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
+<msg time="2025-05-20T09:33:25.810198" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
+<msg time="2025-05-20T09:33:25.909326" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
+<msg time="2025-05-20T09:33:29.298134" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
+<msg time="2025-05-20T09:33:29.310319" level="WARN">Multiple tests with name 'Invalid Login with' executed in suite 'SauceDemo TestCases.LoginTest'.</msg>
+<msg time="2025-05-20T09:33:32.465802" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7633FCF65+75717]
+	GetHandleVerifier [0x00007FF7633FCFC0+75808]
+	(No symbol) [0x00007FF7631C8F9A]
+	(No symbol) [0x00007FF7631A1B41]
+	(No symbol) [0x00007FF76324EC2E]
+	(No symbol) [0x00007FF76326ECC2]
+	(No symbol) [0x00007FF763247153]
+	(No symbol) [0x00007FF763210421]
+	(No symbol) [0x00007FF7632111B3]
+	GetHandleVerifier [0x00007FF7636FD74D+3223469]
+	GetHandleVerifier [0x00007FF7636F7CF2+3200338]
+	GetHandleVerifier [0x00007FF763715B23+3322755]
+	GetHandleVerifier [0x00007FF763416A3A+180890]
+	GetHandleVerifier [0x00007FF76341E13F+211359]
+	GetHandleVerifier [0x00007FF7634052B4+109332]
+	GetHandleVerifier [0x00007FF763405462+109762]
+	GetHandleVerifier [0x00007FF7633EBA79+4825]
+	BaseThreadInitThunk [0x00007FF8BDAE259D+29]
+	RtlUserThreadStart [0x00007FF8BE88AF58+40]
+</msg>
 </errors>
 </robot>
