@@ -57,7 +57,6 @@ Check And Log Broken Links
         END
     END
     
-    # Just log the results without failing the test
     Log    \n\n=== Link Check Results ===    level=INFO
     Log    Total links checked: ${unique_links.__len__()}    level=INFO
     Log    Broken/problematic links found: ${broken_links.__len__()}    level=INFO

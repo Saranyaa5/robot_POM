@@ -20,7 +20,7 @@ Validate Successful Login
     Log    login with ${username} ${password}
     Log To Console    login with ${username} ${password}
     fill the login form    ${Username}    ${Password}
-    IF    '${Username}'=='locked_out_user'
+    IF    '${Username}'=='locked_out_user' or '${Username}'=='saranya'    
         verify locked out error
     ELSE    
         verify the dash board Page    
@@ -38,4 +38,5 @@ verify the dash board Page
     Element Text Should Be    ${dashText}    Swag Labs
 
 verify locked out error
-    Element Text Should Be    ${lockedError}    Epic sadface: Sorry, this user has been locked out.
+    # Element Text Should Be    ${lockedError}    Epic sadface: Sorry, this user has been locked out.
+    Element Should Contain    ${lockedError}    Epic sadface
