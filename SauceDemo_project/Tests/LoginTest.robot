@@ -20,7 +20,7 @@ Validate Successful Login
     Log    login with ${username} ${password}
     Log To Console    login with ${username} ${password}
     fill the login form    ${Username}    ${Password}
-    IF    '${Username}'=='locked_out_user' or '${Username}'=='saranya'    
+    IF    '${Username}'=='locked_out_user' or '${Username}'=='saranya' or ${password}=="hello123"
         verify locked out error
     ELSE    
         verify the dash board Page    
